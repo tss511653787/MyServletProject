@@ -23,6 +23,11 @@
     <servlet-class>app01c.WelcomeServlet</servlet-class>
     <load-on-startup>20</load-on-startup>
   </servlet>
+  <servlet>
+    <servlet-name>AsyncComplete</servlet-name>
+    <servlet-class>app10a.AsyncDispatchServlet</servlet-class>
+    <async-supported>true</async-supported>
+  </servlet>
   <servlet-mapping>
     <servlet-name>WelcomeServlet</servlet-name>
     <url-pattern>/welcome</url-pattern>

@@ -19,9 +19,9 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * Servlet Filter implementation class LoggingFilter
  */
-@WebFilter(filterName = "LoggingFilter", urlPatterns = { "/*" }, initParams = {
-		@WebInitParam(name = "logFileName", value = "log.txt"),
-		@WebInitParam(name = "prefix", value = "URI: ") })
+//@WebFilter(filterName = "LoggingFilter", urlPatterns = { "/*" }, initParams = {
+//		@WebInitParam(name = "logFileName", value = "log.txt"),
+//		@WebInitParam(name = "prefix", value = "URI: ") })
 public class LoggingFilter implements Filter {
 	// 输出
 	private PrintWriter logger;
@@ -60,7 +60,7 @@ public class LoggingFilter implements Filter {
 		logger.flush();
 
 		/*
-		 * 这里如果想实现链条就需要位置另一个filter的引用 然后调用另一个filter的dofilter方法
+		 * 这里如果想实现链条就需要维持另一个filter的引用 然后调用另一个filter的dofilter方法
 		 * eg：filter02.doFilter(request,response,chain);
 		 */
 		// pass the request along the filter chain

@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * Servlet Filter implementation class ImageProtectorFilter
  */
-@WebFilter(filterName = "ImageProtetorFilter", urlPatterns = { "*.png",
-		"*.jpg", "*.gif" })
+//@WebFilter(filterName = "ImageProtetorFilter", urlPatterns = { "*.png",
+//		"*.jpg", "*.gif" })
 public class ImageProtectorFilter implements Filter {
 
 	/**

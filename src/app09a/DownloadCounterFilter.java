@@ -20,9 +20,9 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * Servlet Filter implementation class DownloadCounterFilter
  */
-@WebFilter(filterName = "DownloadCounterFilter", urlPatterns = { "/*" })
+//@WebFilter(filterName = "DownloadCounterFilter", urlPatterns = { "/*" })
 public class DownloadCounterFilter implements Filter {
-
+	// **Executor框架
 	ExecutorService executorService = Executors.newSingleThreadExecutor();
 	Properties downloadLog;
 	File logFile;

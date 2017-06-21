@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 /*
  * 计算一次http请求的时间
  * */
-@WebListener
+//@WebListener
 public class PerStatListener implements ServletRequestListener {
 
 	@Override

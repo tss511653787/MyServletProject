@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSessionBindingListener;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
-@WebListener
+//@WebListener
 public class SessionListener implements HttpSessionListener,
 		ServletContextListener, HttpSessionBindingListener {
 
