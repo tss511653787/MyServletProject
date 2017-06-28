@@ -66,4 +66,19 @@
       <taglib-location>/WEB-INF/x-rt.tld</taglib-location>
     </taglib>
   </jsp-config>
+ 
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>Servlet1</web-resource-name>
+      <url-pattern>/Servlet1</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>member</role-name>
+      <role-name>manager</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <login-config>
+    <auth-method>DIGEST</auth-method>
+    <realm-name>Digest authentication</realm-name>
+  </login-config>
 </web-app>

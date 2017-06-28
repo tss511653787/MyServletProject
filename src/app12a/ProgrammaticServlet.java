@@ -1,8 +1,8 @@
-package app10a;
+package app12a;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
-import javax.servlet.AsyncContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class AsyncDispatchServlet
+ * Servlet implementation class ProgrammaticServlet
  */
-@WebServlet(asyncSupported = true, urlPatterns = { "/asyncDispatch" }, name = "AsyncDispatchServlet")
-public class AsyncDispatchServlet extends HttpServlet {
+@WebServlet("/ProgrammaticServlet")
+public class ProgrammaticServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public AsyncDispatchServlet() {
+	public ProgrammaticServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -31,27 +31,17 @@ public class AsyncDispatchServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		final AsyncContext asyncContext = request.startAsync();
-		request.setAttribute("MainThreader", Thread.currentThread().getName());
-		asyncContext.setTimeout(5000);
-
-		asyncContext.start(new Runnable() {
-
-			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-				try {
-					Thread.sleep(3000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				request.setAttribute("workerThreder", Thread.currentThread()
-						.getName());
-				asyncContext.dispatch("/threadNames.jsp");
-				//asyncContext.complete();
-			}
-		});
+		//用于通过浏览器来显示表单验证用户
+		//具体的验证方式还是在部署描述符中配置
+		if (request.authenticate(response)) {
+			response.setContentType("text/html");
+			PrintWriter out = response.getWriter();
+			out.println("Welcome");
+		} else {
+			// user not authenticated
+			// do something
+			System.out.println("User not authenticated");
+		}
 	}
 
 	/**

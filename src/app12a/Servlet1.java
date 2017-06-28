@@ -1,8 +1,8 @@
-package app10a;
+package app12a;
 
 import java.io.IOException;
 
-import javax.servlet.AsyncContext;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class AsyncDispatchServlet
+ * Servlet implementation class Servlet1
  */
-@WebServlet(asyncSupported = true, urlPatterns = { "/asyncDispatch" }, name = "AsyncDispatchServlet")
-public class AsyncDispatchServlet extends HttpServlet {
+@WebServlet("/Servlet1")
+public class Servlet1 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public AsyncDispatchServlet() {
+	public Servlet1() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -31,27 +31,9 @@ public class AsyncDispatchServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		final AsyncContext asyncContext = request.startAsync();
-		request.setAttribute("MainThreader", Thread.currentThread().getName());
-		asyncContext.setTimeout(5000);
-
-		asyncContext.start(new Runnable() {
-
-			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-				try {
-					Thread.sleep(3000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				request.setAttribute("workerThreder", Thread.currentThread()
-						.getName());
-				asyncContext.dispatch("/threadNames.jsp");
-				//asyncContext.complete();
-			}
-		});
+		RequestDispatcher dispatcher = request
+				.getRequestDispatcher("/1.jsp");
+		dispatcher.forward(request, response);
 	}
 
 	/**

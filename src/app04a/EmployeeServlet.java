@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -51,7 +52,7 @@ public class EmployeeServlet extends HttpServlet {
 		capitals.put("china", "beijing");
 		capitals.put("USA", "HuaShengDun");
 		request.setAttribute("captials", capitals);
-		RequestDispatcher rd = request.getRequestDispatcher("/WebContent/employee.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/employee.jsp");
 		rd.forward(request, response);
 	}
 
