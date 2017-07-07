@@ -39,7 +39,6 @@ public class SessionListener implements HttpSessionListener,
 		// 数量加一
 		int userCount = userCounter.incrementAndGet();
 		System.out.println("userCount increase to:" + userCount);
-
 	}
 
 	@Override

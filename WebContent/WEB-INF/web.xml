@@ -66,10 +66,10 @@
       <taglib-location>/WEB-INF/x-rt.tld</taglib-location>
     </taglib>
   </jsp-config>
- 
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>Servlet1</web-resource-name>
+      <description>A test Servlet</description>
       <url-pattern>/Servlet1</url-pattern>
     </web-resource-collection>
     <auth-constraint>

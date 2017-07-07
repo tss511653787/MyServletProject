@@ -14,7 +14,7 @@ public class AppListener implements ServletContextListener {
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
 		// TODO Auto-generated method stub
-		System.out.println("Listener Start");
+		System.out.println("ServletContext Listener Start");
 		ServletContext servletcontent = sce.getServletContext();
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("bac", "kk");

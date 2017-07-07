@@ -159,6 +159,7 @@ public class AutoCorrectFilter implements Filter {
 		boolean lastCharWasSpace = false;
 		for (int i = 0; i < length; i++) {
 			char c = value.charAt(i);
+			// 只保留多个空格中的一个空格
 			if (c == ' ') {
 				if (!lastCharWasSpace) {
 					temp.append(c);
