@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- 映射了两个控制器类 分别映射到对应的action -->
+	<bean name="/product_input.action2" class="app17a.InputProductController" />
+	<bean name="/product_save.action2" class="app17a.SaveProductController" />
+</beans>
