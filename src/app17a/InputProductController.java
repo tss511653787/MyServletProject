@@ -19,7 +19,7 @@ public class InputProductController implements
 			HttpServletResponse arg1) throws Exception {
 		// TODO Auto-generated method stub
 		logger.info("InputProductController (实现SpringMVC的Controller)called");
-		return new ModelAndView("/SpringJsp/ProductForm.jsp");
+		// 基于viewResolver写法
+		return new ModelAndView("ProductForm");
 	}
-
 }

@@ -32,8 +32,8 @@ public class SaveProductController implements Controller {
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-		return new ModelAndView("/SpringJsp/ProductDetails.jsp", "product",
-				product);
+		// 基于viewResolver写法
+		return new ModelAndView("ProductDetails", "product", product);
 	}
 
 }

@@ -70,12 +70,14 @@
 			<taglib-location>/WEB-INF/x-rt.tld</taglib-location>
 		</taglib>
 	</jsp-config>
+	<!-- 资源安全验证 -->
 	<security-constraint>
 		<web-resource-collection>
 			<web-resource-name>Servlet1</web-resource-name>
 			<description>A test Servlet</description>
 			<url-pattern>/Servlet1</url-pattern>
 		</web-resource-collection>
+		<!-- 用户身份验证 -->
 		<auth-constraint>
 			<role-name>member</role-name>
 			<role-name>manager</role-name>
@@ -85,14 +87,21 @@
 		<auth-method>DIGEST</auth-method>
 		<realm-name>Digest authentication</realm-name>
 	</login-config>
+	<!-- 资源安全验证 -->
+	<!-- SpringMVC -->
 	<servlet>
 		<servlet-name>springmvc</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<!-- 配置定位本servlet的配置文件位置 注意标签顺序必须如下 -->
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/springMVC-conf/springmvc-config2.xml</param-value>
+		</init-param>
 		<load-on-startup>1</load-on-startup>
-
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>springmvc</servlet-name>
-		<url-pattern>*.action2</url-pattern>
+		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	<!-- SpringMVC -->
 </web-app>

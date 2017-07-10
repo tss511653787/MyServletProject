@@ -7,6 +7,26 @@ public class Product implements Serializable {
 	private String name;
 	private String description;
 	private float price;
+	private long id;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public Product() {
+		super();
+	}
+
+	public Product(String name, String description, float price) {
+		super();
+		this.name = name;
+		this.description = description;
+		this.price = price;
+	}
 
 	public String getName() {
 		return name;
@@ -31,4 +51,11 @@ public class Product implements Serializable {
 	public void setPrice(float price) {
 		this.price = price;
 	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return name + " " + description + " " + price;
+	}
+
 }
