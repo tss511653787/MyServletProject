@@ -58,11 +58,11 @@ public class DispathcherServlet extends HttpServlet {
 			dispatherURL = controller.handleRequest(request, response);
 		}
 		if (dispatherURL != null) {
+			// 转发返回的URL结果
 			RequestDispatcher dispather = request
 					.getRequestDispatcher(dispatherURL);
 			dispather.forward(request, response);
 		}
-
 	}
 
 	/**

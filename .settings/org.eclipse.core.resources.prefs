@@ -1,5 +1,7 @@
 eclipse.preferences.version=1
 encoding//WebContent/BookList.jsp=UTF-8
+encoding//WebContent/SpringJsp2/BookEditForm.jsp=UTF-8
+encoding//WebContent/SpringJsp2/ProductForm.jsp=UTF-8
 encoding//WebContent/TodayDate.jsp=UTF-8
 encoding//WebContent/WEB-INF/tags/varDemo.tag=UTF-8
 encoding//WebContent/dataFormatTest.jsp=UTF-8

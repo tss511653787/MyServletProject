@@ -25,6 +25,10 @@ public class ProductController {
 		return "ProductForm";
 	}
 
+	/*
+	 * 针对saveProduct方法解释： saveProduct方法是怎么写出来的？
+	 * springMVC会给每个请求处理方法被调用时创建一个Model实例 Model作用是给View添加属性
+	 */
 	@RequestMapping("/product_save3")
 	public String saveProduct(ProductForm productForm, Model model) {
 		logger.info("基于注解SaveProduct called");
@@ -37,6 +41,7 @@ public class ProductController {
 			// TODO: handle exception
 		}
 		// add product to DB code
+		// save in DB
 		//
 		model.addAttribute("product", product);
 		return "ProductDetails";

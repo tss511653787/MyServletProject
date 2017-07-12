@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; 
+charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -11,7 +14,7 @@
 	<div id="global">
 		<form action="product_save3" method="post">
 			<fieldset>
-				<legend>Add a product</legend>
+				<legend>Add a product(基于注解的Controller会被触发)</legend>
 				<p>
 					<label for="name">Product Name: </label> <input type="text"
 						id="name" name="name" tabindex="1">
@@ -32,7 +35,7 @@
 		</form>
 		<form action="product_save4" method="post">
 			<fieldset>
-				<legend>Add a product</legend>
+				<legend>Add a product(基于注解的依赖注入Controller会被触发)</legend>
 				<p>
 					<label for="name">Product Name: </label> <input type="text"
 						id="name" name="name" tabindex="1">
