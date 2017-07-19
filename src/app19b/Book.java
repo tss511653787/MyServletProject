@@ -18,6 +18,10 @@ public class Book implements Serializable {
 
 	public Book() {
 		super();
+		// 现在给new book一个默认的实现
+		this.title = "please input title here";
+		this.author = "please input author here";
+		this.isbn = "please input isbn here";
 	}
 
 	public Book(long id, String isbn, String title, Category category,

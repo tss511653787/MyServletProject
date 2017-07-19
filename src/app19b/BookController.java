@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class BookController {
 	/*
-	 * 依赖出入一个bookService对象
+	 * 依赖注入一个bookService接口的实例 这里面就是bookServiceImpl
 	 */
 	@Autowired
 	private BookService bookService;

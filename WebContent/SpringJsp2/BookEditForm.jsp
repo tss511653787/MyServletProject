@@ -5,12 +5,7 @@
 <head>
 <title>Edit Book Form</title>
 <style type="text/css">
-@import
-url(
-"<c:url value="
-/
-css
-/main.css"/>");
+@import url("<c:url value="/css/main.css"/>");
 </style>
 </head>
 <body>

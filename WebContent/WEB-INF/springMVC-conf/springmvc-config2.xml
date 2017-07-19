@@ -22,11 +22,44 @@
 	<!-- app19b book应用 扫描 Controller 和依赖注入类 -->
 	<context:component-scan base-package="app19b" />
 
+	<!-- app20a Employee Controller 类 和 Formatter类 -->
+	<context:component-scan base-package="app20a" />
+	<!-- app21a ProductController_Validator 类 -->
+	<context:component-scan base-package="app21a" />
+	<!-- app21b Controller 和 Formatter 类 -->
+	<context:component-scan base-package="app21b" />
+	<!-- app22a Controller类 -->
+	<context:component-scan base-package="app22a" />
+	<!-- app23a uploadFile Controller -->
+	<context:component-scan base-package="app23a" />
+
+	<!--*** 给 annotation-driven元素 设置为bean的id：conversionService 表示使用那个转化器/格式化器 
+		进行转换 *** -->
+	<mvc:annotation-driven conversion-service="conversionService" />
+	<mvc:annotation-driven />
+
 	<!-- 指示包括注册支持基于注解的控制器的请求处理方法的bean对象 -->
 	<mvc:annotation-driven />
 	<!-- 指示了那些静态资源不用通过DispatherServlet处理 -->
 	<mvc:resources mapping="/css/**" location="/css/" />
 	<mvc:resources mapping="/*.html" location="/" />
+
+	<!-- SpringMVC国际化配置 -->
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>/resource/messages</value>
+				<value>/resource/labels</value>
+			</list>
+		</property>
+		<!-- 国家化语言默认值是当前语言环境 -->
+		<property name="useCodeAsDefaultMessage" value="true" />
+	</bean>
+	<!-- AcceptHeaderLocaleResolver实现消息的本地化 -->
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver">
+	</bean>
 
 
 	<bean id="viewResolver"
@@ -34,4 +67,50 @@
 		<property name="prefix" value="/SpringJsp2/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+	<!-- 配置app20a的Converter类 -->
+	<bean id="conversionService2"
+		class="org.springframework.context.support.ConversionServiceFactoryBean">
+		<property name="converters">
+			<list>
+				<bean class="app20a.StringToDateConverter">
+					<!-- 构造器注入 -->
+					<constructor-arg type="java.lang.String" value="MM-dd-yyyy" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<!-- 配置app20a中的Formatter类 -->
+	<bean id="conversionService"
+		class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<property name="formatters">
+			<set>
+				<bean class="app20a.DateFormatter">
+					<constructor-arg type="java.lang.String" value="MM-dd-yyyy" />
+				</bean>
+			</set>
+		</property>
+	</bean>
+	<!-- 配置app20a中Registrar类 -->
+	<bean id="conversionService3"
+		class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<property name="formatterRegistrars">
+			<set>
+				<bean class="app20a.MyFormatterRegistrar">
+					<constructor-arg type="java.lang.String" value="MM-dd-yyyy" />
+				</bean>
+			</set>
+		</property>
+	</bean>
+	<!-- 配置文件上传属性 -->
+	<!-- 使用Commons FileUpload 的实现 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 最大上传大小 -->
+		<property name="maxUploadSize" value="2000000" />
+	</bean>
+	<!-- 使用servlet3.0以上的实现 -->
+	<bean id="multipartResolver1"
+		class="org.springframework.web.multipart.support.StandardServletMultipartResolver">
+	</bean>
+
 </beans>
