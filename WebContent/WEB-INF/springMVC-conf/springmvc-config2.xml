@@ -32,11 +32,16 @@
 	<context:component-scan base-package="app22a" />
 	<!-- app23a uploadFile Controller -->
 	<context:component-scan base-package="app23a" />
+	<!-- app23b Html5 Controller -->
+	<context:component-scan base-package="app23b" />
+	<!-- app24a download Controller -->
+	<context:component-scan base-package="app24a" />
 
 	<!--*** 给 annotation-driven元素 设置为bean的id：conversionService 表示使用那个转化器/格式化器 
 		进行转换 *** -->
-	<mvc:annotation-driven conversion-service="conversionService" />
 	<mvc:annotation-driven />
+	<mvc:annotation-driven conversion-service="conversionService" />
+
 
 	<!-- 指示包括注册支持基于注解的控制器的请求处理方法的bean对象 -->
 	<mvc:annotation-driven />

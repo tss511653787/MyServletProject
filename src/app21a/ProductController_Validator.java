@@ -43,10 +43,12 @@ public class ProductController_Validator {
 
 	/*
 	 * 使用校验器的另一种方法是在Contoller中编写initBinder方法并将校验器传到WebDataBinder 并调用其validat方法
+	 * 如果使用这个注解就不用在上面方法中显示调用 productValidator.validate(product, bindingResult)
 	 */
-	//@InitBinder
+	// @InitBinder
 	public void initBinder(WebDataBinder binder) {
 		logger.info("initBinder in ProductController");
+		binder.addValidators(new ProductValidator());
 		binder.initDirectFieldAccess();
 		binder.setDisallowedFields("id");
 		binder.setRequiredFields("name", "description", "price");
