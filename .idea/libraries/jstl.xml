@@ -1,0 +1,36 @@
+<component name="libraryTable">
+  <library name="jstl">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/jstl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/standard.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/src.zip!/" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/benchmark/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/bsf/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/cache/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/datetime/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/gnat-tags/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/i18n/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/input/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/io/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/jmstags/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/jndi/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/log/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/mailer/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/random/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/rdc/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/regexp/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/scrape/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/standard-1.0/examples/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/standard-1.0/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/standard/examples/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/standard/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/standard/test" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/string/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/tools/UltraDev/4.0/ctlx/src" />
+      <root url="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/JSTL-src.zip!/jakarta-taglibs/xtags/src" />
+    </SOURCES>
+  </library>
+</component>

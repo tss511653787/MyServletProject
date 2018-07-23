@@ -108,11 +108,11 @@
 	</bean>
 	<!-- 配置文件上传属性 -->
 	<!-- 使用Commons FileUpload 的实现 -->
-	<bean id="multipartResolver"
-		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	<!--<bean id="multipartResolver"-->
+		<!--class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
 		<!-- 最大上传大小 -->
-		<property name="maxUploadSize" value="2000000" />
-	</bean>
+		<!--<property name="maxUploadSize" value="2000000" />-->
+	<!--</bean>-->
 	<!-- 使用servlet3.0以上的实现 -->
 	<bean id="multipartResolver1"
 		class="org.springframework.web.multipart.support.StandardServletMultipartResolver">
